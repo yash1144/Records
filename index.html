@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced LocalStorage CRUD Example</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="main-title">Manage Records</h1>
+
+    <div class="form-container">
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Enter name" class="input-field" />
+      </div>
+      <div class="input-group">
+        <input type="text" id="details" placeholder="Enter details" class="input-field" />
+      </div>
+      <div class="button-group">
+        <button id="addButton" onclick="addRecord()" class="btn add-btn">Add Record</button>
+        <button id="updateButton" onclick="updateRecord()" class="btn update-btn" style="display: none">Update Record</button>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="search" placeholder="Search by name" class="input-field search-field" onkeyup="searchRecords()" />
+    </div>
+
+    <h2 class="subtitle">Stored Records</h2>
+    <table class="records-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Details</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="recordList"></tbody>
+    </table>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
